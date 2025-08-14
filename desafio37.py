@@ -6,7 +6,7 @@ Escreva um programa que leia um número inteiro e peça para o usuário escolher
 """
 
 numero = int(input("Digite um número inteiro: "))
-base = int(input("1 para binário \n2 para octal \n3 para hexadecimal \nQual será a base para conversão do número? "))
+base = int(input("1 - para binário \n2 - para octal \n3 - para hexadecimal \nQual será a base para conversão do número? "))
 
 if (base == 1):
     print("Número digitado convertido para binário: {}".format(bin(numero)[2:]))
