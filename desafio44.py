@@ -8,11 +8,11 @@ Elabore um programa que calcule o valor a ser pago por um produto, considerando 
 valor = float(input("Valor do produto: R$"))
 
 print("""
-\nForma de Pagamento: \n
-1 - À vista no dinheiro, cheque ou pix\n
-2 - À vista no cartão\n
-3 - Em até 2x no cartão\n \
-4 - 3x ou mais no cartão \n
+\nForma de Pagamento:
+1 - À vista no dinheiro, cheque ou pix
+2 - À vista no cartão
+3 - Em até 2x no cartão
+4 - 3x ou mais no cartão
 """)
 
 forma = int(input("Forma de pagamento escolhida: "))
