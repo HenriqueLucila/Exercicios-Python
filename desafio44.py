@@ -23,8 +23,13 @@ elif forma == 2:
     valor_final = valor * 0.95
 elif forma == 3:
     valor_final = valor
+    parcela = valor_final / 2
+    print("Você pagará em 2x de R${:.2f}".format(parcela))
 elif forma == 4:
     valor_final = valor * 1.20
+    vezes = int(input("Em quantas vezes você irá parcelar? "))
+    parcela = valor_final / vezes
+    print("Sua compra será parcelada em {}x de R${:.2f}".format(vezes, parcela))
 else:
     print("Forma de pagamento inválida")
     exit()
