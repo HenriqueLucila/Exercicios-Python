@@ -8,16 +8,22 @@ Seu programa também deverá mostrar o tempo que falta ou que passou do prazo.
 from datetime import datetime
 
 nascimento = int(input("Em qual ano você nasceu? "))
+sexo = str(input("[M] - para Masculino \n[F] - para Feminino \nQual o seu sexo? ")).upper()
 
 ano_atual = datetime.today().year
 idade = ano_atual - nascimento
 
-if(idade < 18):
-    saldo = 18 - idade
-    print("Ainda não é hora de se alistar. Faltam {} anos para seu alistamento.".format(saldo))
-elif(idade == 18):
-    print("Hora de se alistar ao serviço militar.")
+if sexo == "M":
+    if(idade < 18):
+        saldo = 18 - idade
+        print("Ainda não é hora de se alistar. Faltam {} anos para seu alistamento.".format(saldo))
+    elif(idade == 18):
+        print("Hora de se alistar ao serviço militar.")
+    else:
+        saldo = idade - 18
+        ano_alistamento = ano_atual - saldo
+        print("Você já passou do tempo do alistamento. Já fazem {} anos do ano de seu alistamento.\nSeu alistamento foi em {}.".format(saldo, ano_alistamento))
+elif sexo == "F":
+    print("O alistamento militar não é obrigatório para mulheres")
 else:
-    saldo = idade - 18
-    ano_alistamento = ano_atual - saldo
-    print("Você já passou do tempo do alistamento. Já fazem {} anos do ano de seu alistamento.\nSeu alistamento foi em {}.".format(saldo, ano_alistamento))
+    print("Opção inválida!")
