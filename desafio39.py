@@ -9,11 +9,15 @@ from datetime import datetime
 
 nascimento = int(input("Em qual ano você nasceu? "))
 
-idade = datetime.today().year - nascimento
+ano_atual = datetime.today().year
+idade = ano_atual - nascimento
 
 if(idade < 18):
-    print("Ainda não é hora de se alistar. Faltam {} anos para seu alistamento.".format(18 - idade))
+    saldo = 18 - idade
+    print("Ainda não é hora de se alistar. Faltam {} anos para seu alistamento.".format(saldo))
 elif(idade == 18):
     print("Hora de se alistar ao serviço militar.")
 else:
-    print("Você já passou do tempo do alistamento. Já fazem {} anos".format(idade - 18))
+    saldo = idade - 18
+    ano_alistamento = ano_atual - saldo
+    print("Você já passou do tempo do alistamento. Já fazem {} anos do ano de seu alistamento.\nSeu alistamento foi em {}.".format(saldo, ano_alistamento))
