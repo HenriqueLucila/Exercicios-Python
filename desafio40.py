@@ -11,7 +11,7 @@ media = (n1 + n2) / 2
 
 if media < 5.0:
     print("Média: {:.2f} \nSituação final: REPROVADO.".format(media))
-elif media > 5.0 and media < 7.0:
+elif 7 > media > 5.0:
     print("Média: {:.2f} \nSituação final: RECUPERAÇÃO.".format(media))
 elif media >= 7.0:
     print("Média: {:.2f} \nSituação final: APROVADO.".format(media))
