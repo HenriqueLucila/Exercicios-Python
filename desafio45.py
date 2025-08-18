@@ -1,16 +1,26 @@
 # Crie um programa que faça o computador jogar Jokenpô com você
 import random
+from time import sleep
 
+print("=" * 20)
 print("""
 Brincadeira do Jokenpô:
 1 - PEDRA
 2 - PAPEL
 3 - TESOURA
 """)
+print("=" * 20)
 
 jogador = int(input("Escolha sua jogada: "))
 
 maquina = random.randint(1, 3)
+
+print("JO")
+sleep(1)
+print("KEN")
+sleep(1)
+print("PÔ")
+sleep(1)
 
 if jogador == 1 and maquina == 1:
     print("Empate! Os dois escolheram pedra")
